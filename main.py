@@ -33,6 +33,7 @@ def main():
     print("python最高分：", max_s)
     print("python最低分：", min_s)
     print("python平均分：", round(avg_s, 2))
+    print("学生人数：", len(scores))
 
 
 if __name__ == "__main__":
