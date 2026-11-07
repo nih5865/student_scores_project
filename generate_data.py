@@ -1,0 +1,30 @@
+import csv
+from pathlib import Path
+
+CSV_PATH = Path(__file__).resolve().parent / "data" / "student.csv"
+
+
+def generate_data(csv_path):
+    with open(csv_path, "w", newline="", encoding="utf-8-sig") as f:
+        writer = csv.writer(f)
+
+        writer.writerow(["学号", "姓名", "性别", "python成绩"])
+
+        writer.writerows([
+            ["2025001", "张三", "男", 85],
+            ["2025002", "李四", "女", 92],
+            ["2025003", "王五", "男", 78],
+            ["2025004", "赵六", "女", 88],
+            ["2025005", "孙七", "男", 90],
+            ["2025006", "周八", "女", 75],
+            ["2025007", "吴九", "男", 82],
+            ["2025008", "郑十", "女", 95]
+        ])
+
+
+def main():
+    generate_data(CSV_PATH)
+
+
+if __name__ == "__main__":
+    main()
